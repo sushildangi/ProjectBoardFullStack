@@ -42,5 +42,10 @@ public class ProjectTaskController {
         return new ResponseEntity<>(newPT, HttpStatus.CREATED);
     }
 
+    @GetMapping("/all")
+    public Iterable<ProjectTask> getAllPTs(){
+        return projectTaskService.findAll();
+    }
+
 
 }
